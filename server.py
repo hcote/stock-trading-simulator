@@ -18,7 +18,6 @@ def index():
 
 @app.route("/get_my_ip", methods=["GET"])
 def get_my_ip():
-    print(request.environ)
     return jsonify({'ip': request.remote_addr}), 200
   
 @app.route("/signup", methods=['POST', 'GET'])
